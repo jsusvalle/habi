@@ -1,8 +1,8 @@
-# Challenge SkyDropx
+# Template
 
-El objectivo es desarrollar una aplicación que permita al usuario escoger la opción de servicio de paquetería de su preferencia para enviar un paquete.
+Descripción
 
-⌨️ [Live Version](https://challenge-skydropx.vercel.app/) �
+⌨️ [Live Version](https://app/) �
 
 ### Instalación 🔧
 
