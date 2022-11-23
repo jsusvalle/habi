@@ -1,0 +1,4 @@
+export const SET_LIST_RATES_SHIPMENT = "SET_LIST_RATES_SHIPMENT";
+export const SET_LIST_LABELS_CREATE = "SET_LIST_LABELS_CREATE";
+export const LOADING = "LOADING";
+export const ERROR = "ERROR";
