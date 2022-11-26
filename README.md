@@ -1,8 +1,6 @@
 # Prueba Habi
 
-Descripción
-
-⌨️ [Live Version](https://app/) �
+⌨️ [Live Version](https://app/https://habi-git-main-jsusvalle.vercel.app/) �
 
 ### Instalación 🔧
 
