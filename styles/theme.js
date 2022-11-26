@@ -5,10 +5,12 @@ const theme = {
     blue: "#325EFC",
     blueDark: "#262e49",
     gray: "#EEF2F3",
+    grayMain: "#F2F4F5",
     grayDark: "#333C4E",
     grayLight: "#D7DAE4",
     grayMedium: "#505564",
     red: "#c53030",
+    purple: "#6301CC"
   },
   hover: {
     none: "none",
@@ -18,6 +20,7 @@ const theme = {
     grayDark: "#4b505a",
     grayLight: "#727375",
     grayMedium: "#5e5f64",
+    purple: "#6301CC"
   },
   spacing: {
     0: "0",

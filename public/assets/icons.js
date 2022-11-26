@@ -22,3 +22,16 @@ export const IconSearch = ({ color = "#000", width = "18", height = "18" }) => (
     />
   </svg>
 );
+
+export const IconCheck = ({ color = "#fff", width = "14", height = "14" }) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox={`0 0 490 490`}
+    fill={color}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path fill={color} d="M452.253 28.326L197.831 394.674 29.044 256.875 0 292.469l207.253 169.205L490 54.528z">
+    </path>
+  </svg>
+);
