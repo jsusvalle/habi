@@ -3,7 +3,6 @@ import theme from "styles/theme";
 
 export const ButtonContainer = styled.button`
   background: ${(props) => theme.colors[props.color]};
-  box-shadow: 0 2px 6px 1px ${(props) => theme.colors[props.color]};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   margin: 0;

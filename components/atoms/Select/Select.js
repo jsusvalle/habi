@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ContainerForm, ContainerTextField, ContainerError, InputTextField, LabelContainer, Label } from "./TextField.styles";
-import { options } from "./TextField.constants";
+import { ContainerForm, ContainerSelect, ContainerError, InputSelect, LabelContainer, Label } from "./Select.styles";
+import { options } from "./Select.constants";
 
 const handleChange =
   ({ onChange }) =>
@@ -10,7 +10,7 @@ const handleChange =
     onChange(e);
   };
 
-const TextField = React.forwardRef(
+const Select = React.forwardRef(
   (
     {
       type,
@@ -22,7 +22,7 @@ const TextField = React.forwardRef(
       name,
       label,
       error,
-      placeholder,
+      children,
       ...restProps
     },
     ref
@@ -33,20 +33,23 @@ const TextField = React.forwardRef(
           <Label>{label}</Label>
         </LabelContainer>
       
-        <ContainerTextField error={error} {...restProps}>
-          <InputTextField
+        <ContainerSelect error={error} {...restProps}>
+          <InputSelect
             ref={ref}
             type={type}
             value={value}
             onChange={handleChange({ onChange })}
-            placeholder={placeholder}
+            placeholder=""
             color={color}
             bgColor={bgColor}
             spacing={spacing}
             name={name}
-            role="input"
-          />
-        </ContainerTextField>
+            role="select"
+          >
+            <option value={""}>Escoge una opción</option>
+            {children}
+          </InputSelect>
+        </ContainerSelect>
 
         <ContainerError>{error && error}</ContainerError>
       </ContainerForm>
@@ -54,30 +57,29 @@ const TextField = React.forwardRef(
   }
 );
 
-TextField.propTypes = {
+Select.propTypes = {
   type: PropTypes.string,
   name: PropTypes.string,
   label: PropTypes.string,
-  placeholder: PropTypes.string,
   error: PropTypes.oneOfType([PropTypes.string]),
   color: PropTypes.oneOf(options.colors),
   bgColor: PropTypes.oneOf(options.colors),
   spacing: PropTypes.oneOf(options.spacings),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  children: PropTypes.node,
   onChange: PropTypes.func,
 };
 
-TextField.defaultProps = {
+Select.defaultProps = {
   type: "text",
   color: "black",
   bgColor: "grayDark",
   onChange: () => {},
-  value: "",
+  value: null,
   label: "",
   error: "",
-  placeholder: "",
 };
 
-TextField.displayName = 'TextField';
+Select.displayName = 'Select';
 
-export default TextField;
+export default Select;

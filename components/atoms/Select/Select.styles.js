@@ -14,7 +14,7 @@ export const Label = styled.label`
   font-weight: bold;
 `;
 
-export const ContainerTextField = styled.div`
+export const ContainerSelect = styled.div`
   border: ${(props) => (props.error ? "1px solid #c53030" : "1px solid #333C4E")};
   padding: 2px;
   border-radius: 4px;
@@ -29,7 +29,7 @@ export const ContainerTextField = styled.div`
   position: relative;
 `;
 
-export const InputTextField = styled.input`
+export const InputSelect = styled.select`
   background: ${(props) =>
   theme.colors[props.bgColor] || theme.colors.grayDark};
   font: inherit;

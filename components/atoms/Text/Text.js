@@ -58,4 +58,6 @@ Text.defaultProps = {
   width: "full",
 };
 
+Text.displayName = 'Text';
+
 export default Text;

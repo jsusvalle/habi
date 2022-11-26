@@ -51,6 +51,8 @@ Button.propTypes = {
   color: PropTypes.string,
   children: PropTypes.node.isRequired,
   loading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  spacing: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   borderRadius: PropTypes.string,
@@ -66,8 +68,9 @@ Button.defaultProps = {
   width: "100%",
   height: "100%",
   borderRadius: "1rem",
-
   onClick: () => {},
 };
+
+Button.displayName = 'Button';
 
 export default Button;
