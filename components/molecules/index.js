@@ -1,7 +1,7 @@
 import Link from "./Link/Link";
-import IconButton from "./IconButton/IconButton";
-import CardList from "./CardList/CardList";
-import DisplayMessage from "./DisplayMessage/DisplayMessage";
-import Pagination from "./Pagination/Pagination";
+import Stepper from "./Stepper/Stepper";
+import ButtonForm from "./ButtonForm/ButtonForm";
+import Modal from "./Modal/Modal";
+import FloatButton from "./FloatButton/FloatButton";
 
-export { Link, IconButton, CardList, DisplayMessage, Pagination };
+export { Modal, Link, Stepper, ButtonForm, FloatButton };
