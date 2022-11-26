@@ -69,7 +69,7 @@ const SumaryData = () => {
 
             <Grid>
                 <Text size="base" weight="bold">Costo</Text>
-                <Text textAlign="end" size="base" weight="normal">{validationStrings(dataForm.num_floors)}</Text>
+                <Text textAlign="end" size="base" weight="normal">{validationStrings(dataForm.amount)}</Text>
             </Grid>
 
             <Spacer spacing={3} />
