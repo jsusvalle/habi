@@ -1,28 +1,24 @@
 import * as t from "../types";
 
 const initialState = {
-  listRates: [],
-  listLabels: [],
-  loading: false,
-  error: null,
+    fullname: "",
+    email: "",
+    address: "",
+    num_floors: 0,
+    apartment_options: [],
+    parking_lot: false,
+    amount: 0,
+    photo: 0,
+    elevator: false
 };
 
 const main = (state = initialState, action) => {
   switch (action.type) {
-    case t.LOADING:
-      return { ...state, loading: action.payload };
-
-    case t.ERROR:
-      return { ...state, listRates: [], error: action.payload };
-
-    case t.SET_LIST_RATES_SHIPMENT:
-      return { ...state, listRates: action.payload, error: null };
-
-    case t.SET_LIST_LABELS_CREATE:
-      return { ...state, listLabels: action.payload };
+    case t.SAVE_DATA:
+      return { ...state, [action.payload.name]: action.payload.value };
 
     default:
-      return { ...state };
+      return state;
   }
 };
 
