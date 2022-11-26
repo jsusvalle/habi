@@ -1,0 +1,84 @@
+{
+    "steps": [
+        {
+            "step": 1,
+            "name": "fullname",
+            "description": "Nombre y apellidos",
+            "component": "TextForm",
+            "path": "datos-nombres",
+            "next_path": "datos-email"
+        },
+        {
+            "step": 2,
+            "name": "email",
+            "description": "Correo electrónico",
+            "component": "EmailForm",
+            "path": "datos-email",
+            "next_path": "datos-direccion"
+        },
+        {
+            "step": 3,
+            "name": "address",
+            "description": "Dirección del apartamento",
+            "component": "AddressForm",
+            "path": "datos-direccion",
+            "next_path": "datos-piso"
+        },
+        {
+            "step": 4,
+            "name": "num_floors",
+            "description": "Número de piso",
+            "component": "NumFloorsForm",
+            "path": "datos-piso",
+            "next_path": "datos-apto-opciones"
+        },
+        {
+            "step": 5,
+            "name": "apartment_options",
+            "description": "Apartamento cuenta con",
+            "component": "AptOptionsForm",
+            "path": "datos-apto-opciones",
+            "next_path": "datos-parqueadero"
+        },
+        {
+            "step": 6,
+            "name": "parking_lot",
+            "description": "¿Tiene parqueadero?",
+            "component": "ParkingLotForm",
+            "path": "datos-parqueadero",
+            "next_path": "datos-monto"
+        },
+        {
+            "step": 7,
+            "name": "amount",
+            "description": "Monto del inmueble",
+            "component": "AmountForm",
+            "path": "datos-monto",
+            "next_path": "datos-foto"
+        },
+        {
+            "step": 8,
+            "name": "photo",
+            "description": "Foto del inmueble",
+            "component": "PhotoForm",
+            "path": "datos-foto",
+            "next_path": "datos-elevador"
+        },
+        {
+            "step": 9,
+            "name": "elevator",
+            "description": "¿El apartamento tiene ascensor?",
+            "component": "ElevatorForm",
+            "path": "datos-elevador",
+            "next_path": "datos-resumen"
+        },
+        {
+            "step": 10,
+            "name": "resumen",
+            "description": "Resumen",
+            "component": "SumaryData",
+            "path": "datos-resumen",
+            "next_path": "datos-email"
+        }
+    ]
+}
