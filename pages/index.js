@@ -1,13 +1,9 @@
-import { useSelector } from "react-redux";
+import React from "react";
 
-import QuoteShipping from "components/templates/QuoteShipping/QuoteShipping";
+import { HomeBackground } from "components/templates";
 
 export default function Home() {
-  const loading = useSelector(({ main }) => main.loading);
-  const error = useSelector(({ main }) => main.error);
-  const listRates = useSelector(({ main }) => main.listRates);
-
-  return (
-    <QuoteShipping loading={loading} error={error} listRates={listRates} />
-  );
+    return (
+        <HomeBackground />
+    );
 }
