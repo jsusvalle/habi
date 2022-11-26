@@ -1,4 +1,4 @@
-# Template
+# Prueba Habi
 
 Descripción
 
@@ -24,9 +24,7 @@ npm run test
 
 ## Construido con 🛠️
 
-* Library: ReactJS
-* Framework: Next JS.
-* Testing: Jest y React testing library
-* Global state management: Redux.
-
-
+- Library: ReactJS
+- Framework: Next JS.
+- Testing: Jest y React testing library
+- Global state management: Redux.
