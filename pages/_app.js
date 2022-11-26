@@ -1,21 +1,35 @@
-import { ToastContainer } from "react-toastify";
+import React from 'react';
+import PropTypes from "prop-types";
+import { wrapper } from '../redux/store';
+import { useStore } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { ThemeProvider } from "styled-components";
-import { Wrapper } from "../redux/store";
-import Layout from "components/templates/Layout/Layout";
-
 import GlobalStyle from "../styles/global";
 import theme from "../styles/theme";
-import { config } from "utils/configToast";
-import "react-toastify/dist/ReactToastify.css";
 
-const MyApp = ({ Component, pageProps }) => (
-  <ThemeProvider theme={theme}>
-    <Layout>
-      <Component {...pageProps} />
-      <GlobalStyle />
-      <ToastContainer {...config} />
-    </Layout>
-  </ThemeProvider>
-);
+function MyApp({ Component, pageProps }) {
+  const store = useStore((state) => state);
+  
+  return process.browser ? (
+    <PersistGate persistor={store.__persistor} loading={<div>Loading</div>}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+        <GlobalStyle />
+      </ThemeProvider>
+    </PersistGate>
+  ) : (
+    <PersistGate persistor={store}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+        <GlobalStyle />
+      </ThemeProvider>
+    </PersistGate>
+  );
+}
 
-export default Wrapper.withRedux(MyApp);
+MyApp.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.object
+};
+
+export default wrapper.withRedux(MyApp);
